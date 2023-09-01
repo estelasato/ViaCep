@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="tarefa3_viaCep.Views.getAddress">
+   
+    <ContentPage.Content>
+        <VerticalStackLayout 
+            Padding="0,100,0,0"
+            HorizontalOptions="Center"
+            Spacing="14">
+            <Label 
+                HorizontalOptions="Center"
+                Text="Entre com o CEP" 
+                FontSize="24"/>
+
+            <HorizontalStackLayout Spacing="12" Padding="0,10">
+                <Frame 
+                    Padding="0,0,0,0" 
+                    WidthRequest="200" 
+                    BorderColor="Gray" 
+                    HeightRequest="40" 
+                    x:Name="FrmCep">
+                    <Entry 
+                        x:Name="valueCEP" 
+                        Placeholder="Entre com o CEP" 
+                        FontSize="12"
+                        Keyboard="Numeric">
+                       
+                    </Entry>
+                </Frame>
+                <Button 
+                    Text="Buscar"
+                    WidthRequest="90"
+                    FontSize="12"
+                    x:Name="btnPesquisar"
+                    Clicked="PesquisaCEP"
+                    />
+            </HorizontalStackLayout>
+
+
+            <Frame 
+                Padding="0" 
+                BorderColor="Gray" 
+                HeightRequest="40">
+                <Entry 
+                    Placeholder="Logradouro" 
+                    x:Name="EntryLogradouro" 
+                    IsReadOnly="true"
+                    FontSize="12"
+                />
+            </Frame>
+
+            <Frame 
+                Padding="0"
+                BorderColor="Gray" 
+                HeightRequest="40">
+                <Entry 
+                    Placeholder="Bairro"
+                    FontSize="12"
+                    x:Name="EntryBairro" 
+                    IsReadOnly="true"
+                />
+            </Frame>
+
+            <HorizontalStackLayout Spacing="12">
+                <Frame 
+                    BorderColor="Gray" 
+                    WidthRequest="155" 
+                    Padding="0"
+                    HeightRequest="40">
+                    <Entry 
+                        Placeholder="Localidade" 
+                        x:Name="EntryLocalidade" 
+                        FontSize="12"
+                        IsReadOnly="true"/>
+                </Frame>
+
+                <Frame
+                    Padding="0"
+                    BorderColor="Gray" 
+                    WidthRequest="60"
+                    HeightRequest="40">
+                    <Entry 
+                        Placeholder="UF" 
+                        x:Name="EntryUF" 
+                        IsReadOnly="true"
+                        FontSize="12"
+                    />
+                </Frame>
+
+                <Frame
+                    Padding="0"
+                    BorderColor="Gray"
+                    HeightRequest="40"
+                    WidthRequest="60"
+                    >
+                    <Entry
+                        Placeholder="DDD" 
+                        x:Name="EntryDDD" 
+                        IsReadOnly="true"
+                        FontSize="12"
+                        />
+                </Frame>
+            </HorizontalStackLayout>
+
+            <Button 
+                Text="Limpar"
+                Clicked="LimparCampos"
+            />
+
+        </VerticalStackLayout>
+  </ContentPage.Content>
+</ContentPage>
